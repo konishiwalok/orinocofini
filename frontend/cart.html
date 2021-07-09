@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="”robots”" content="index, follow" />
+    <meta
+      name="description"
+      content="Orinoco est une enterprise qui s'en charge de vendre des anciens appareils photos trés rares dans le monde "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="cameras vintage, uniques au monde,vintage  "
+    />
+
+    <title>Orinoco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="tableau-mini  bg-oniPink my-5 container">
+      <h4 class="py-5 text-center stilo700">Mon panier</h4>
+      <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">Cameras</th>
+            <th scope="col">Lentille</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Ajouter ou Supprimer</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items-cart"></tbody>
+        <tfoot>
+          <tr id="footer-cart">
+            <th scope="row" colspan="5">
+              Panier vide , ajoutez des produits!
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+      <!-- <h4>Cards</h4> -->
+      <div class="row" id="cards"></div>
+    
+
+    <template id="template-footer">
+      <th scope="row" colspan="2">Total produits</th>
+      <td class="total-products">10</td>
+      <td>
+        <button
+          class="btn btn-danger btn-sm h1"
+          style="font-size: 15px"
+          id="btn-clear-cart"
+        >
+          vider le panier
+        </button>
+      </td>
+      <td></td>
+      <td class="font-weight-bold">
+        $ <span id="total-price" class="total-price">5000</span>
+      </td>
+    </template>
+
+    <template id="template-cart">
+      <tr>
+        <th scope="row">id</th>
+        <td class="name-item">Café</td>
+        <td class="cantidad-item">1</td>
+        <td>
+          <button class="btn btn-info btn-sm sum">+</button>
+          <button class="btn btn-danger btn-sm res">-</button>
+        </td>
+        <td>$ <span id="precio-item">500</span></td>
+        <td>$ <span id="total-item">500</span></td>
+      </tr>
+    </template>
+
+    <!-- <template id="template-card">
+      <div class="col-12 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <h5>Titulo</h5>
+            <p>precio</p>
+            <button class="btn btn-dark">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </template> -->
+    </div>
+
+    <section class="mt-4 rounded-md p-4 degrade container ">
+      <h2 class="text-lg font-bold mb-2 h2 stilo700">Passer commande</h2>
+
+      <main>
+        <form action="" class="formulario" id="formulario">
+          <!-- Grupo: Nom-->
+          <div class="formulario__grupo" id="grupo__lastname">
+            <label for="lastname" class="formulario__label">Nom</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="lastname"
+                id="lastname"
+                placeholder="Rousseau"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ecrivez votre Nom de famille</p>
+          </div>
+          <!-- Grupo: Prenom -->
+          <div class="formulario__grupo" id="grupo__firstname">
+            <label for="firstname" class="formulario__label">Prénom</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="firstname"
+                id="firstname"
+                placeholder="Matthieu"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ecrivez votre Prénom</p>
+          </div>
+
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__email">
+            <label for="email" class="formulario__label">Adresse e-mail</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="email"
+                class="formulario__input"
+                name="email"
+                id="email"
+                placeholder="rousseauM@yahoo.fr"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              L'e-mail ne peut contenir que des lettres, des chiffres, des
+              points, des traits d'union exemple:@ , - , 78 .
+            </p>
+          </div>
+
+          <!-- Grupo: postal -->
+          <div class="formulario__grupo" id="grupo__zipcode">
+            <label for="zipcode" class="formulario__label">Code Postal</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="zipcode"
+                id="zipcode"
+                placeholder="71005"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              Veuillez saisir votre code postal (chiffres).
+            </p>
+          </div>
+          <!-- Grupo: ville -->
+          <div class="formulario__grupo" id="grupo__city">
+            <label for="city" class="formulario__label">Ville</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="city"
+                id="city"
+                placeholder="Paris"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Veuillez saisir votre ville</p>
+          </div>
+          <!-- Grupo: adress -->
+          <div class="formulario__grupo" id="grupo__adress">
+            <label for="adress" class="formulario__label">Adresse</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="adress"
+                id="adress"
+                placeholder="27 avenue de tournesol"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Veuillez saisir votre adresse</p>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <a 
+            class="
+            formulario__btn
+            confirmPurchase
+            inline-flex justify-center py-2 px-4 mt-5 h5 shadow-sm text-sm
+            font-medium  rounded-md text-white  bg-indigo-600 hover:bg-indigo-700" 
+            id="confirmPurchase">Envoyer</a>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+              Formulario enviado exitosamente!
+            </p>
+          </div>
+          <!-- <div
+            class="
+              flex
+              justify-end
+              formulario__grupo formulario__grupo-btn-enviar 
+            
+            "
+          >
+            <a
+              id="confirmPurchase"
+              class="
+                confirmPurchase
+                inline-flex
+                justify-center
+                py-2
+                px-4
+                mt-5
+                border border-transparent
+                h5
+                shadow-sm
+                text-sm
+                font-medium
+                rounded-md
+                text-white
+                bg-indigo-600
+                hover:bg-indigo-700
+                formulario__btn
+              "
+              href="#"
+            >
+              Procéder au paiement</a
+            >
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+                Formulario enviado exitosamente!
+              </p>
+          </div> -->
+          <!-- <div class="flex justify-end formulario__grupo formulario__grupo-btn-enviar">
+                    <a id="confirmPurchase" class="confirmPurchase inline-flex justify-center py-2 px-4 mt-5 border border-transparent h5 shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 "
+                      href="#" > Procéder au paiement</a>
+                   </div> -->
+        </form>
+      </main>
+    </section>
+    <script src="styles/styles.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/validation.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
