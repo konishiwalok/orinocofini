@@ -153,7 +153,7 @@ const sendInfo = e => {
         console.log(info)
         localStorage.removeItem('cart', JSON.stringify(cart))
         localStorage.setItem('dUser', JSON.stringify(info));
-        window.location.href = `${window.location.origin}/frontend/confirmation.html?orderId=${json.orderId}`
+        window.location.href = `${window.location.origin}/projecto5new/frontend/confirmation.html?orderId=${json.orderId}`
       })
       .catch(() => {
         alert(error)
