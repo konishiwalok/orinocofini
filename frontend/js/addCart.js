@@ -13,12 +13,12 @@ const addCart = e => {
         if (lenseCheck(e.target.parentElement.querySelector('#lenses-all-buttons'))) {
             setCart(e.target.parentElement)
         } else {
-            window.alert("escoja una lente")
+            window.alert("choissisez une lentille ")
         }
     }
     e.stopPropagation();
 }
-// Separa la informacion del item
+// Separer la info d item
 const setCart = obj => {
 
     const product = {
@@ -39,7 +39,7 @@ const setCart = obj => {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Verificamos cual de las lentes selecciono cuando agrego al carro de compra
+// verification d achat de lentilles 
 const lenseCheck = lenses => {
 
     for (let i = 0; i < lenses.children.length; i++) {

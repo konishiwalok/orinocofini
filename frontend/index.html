@@ -1,67 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name=”robots” content="index, follow">
-    <meta name="description" content="Orinoco est une enterprise qui s'en charge de vendre des anciens appareils photos trés rares dans le monde ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="”robots”" content="index, follow" />
+    <meta
+      name="description"
+      content="Orinoco est une enterprise qui s'en charge de vendre des anciens appareils photos trés rares dans le monde "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="cameras vintage, uniques au monde,vintage" />
-    
+
     <title>Orinoco</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
 
-  <div id="mainSlider" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active modifimg">
-        <img src="img/vcam_4.jpg" class="d-block w-100 " alt="...">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="mainSlider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active modifimg">
+          <img src="img/vcam_4.jpg" class="d-block w-100" alt="..." />
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="camera" class="container w-50 pl-5 pr-5 rounded-lg">
-    <div class="row align-items-center">
-      <div class="col-sm p-3 text-light text-center">
-        <h4 class="h2 text-shadow titrecamera stilo700">Nos Cameras</h4>
+    <div id="camera" class="container w-50 pl-5 pr-5 rounded-lg">
+      <div class="row align-items-center">
+        <div class="col-sm p-3 text-light text-center">
+          <h4 class="h2 text-shadow titrecamera stilo700">Nos Cameras</h4>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <div class="degrade">
-    <div class="container-md p-5">
-      <div class="row pt-5">
-        <h3 class="text-center pb-5 pt-5 h1 stilo700">Bienvenue au coin des vintages cameras</h3>
-      </div>
-      <div id="items" class="row"></div>
 
-      <template id="items-camera">
-        <div class="col-sm-6 col-md-4">
-          <div class="card w-100 card-border mb-5">
-            <img src="img/vcam_1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a id="productLink" href="" class="btn btn-primary">Voir Details</a>
+    <div class="degrade">
+      <div class="container-md p-5">
+        <div class="row pt-5">
+          <h3 class="text-center pb-5 pt-5 h1 stilo700">
+            Bienvenue au coin des vintages cameras
+          </h3>
+        </div>
+        <div id="items" class="row"></div>
+
+        <template id="items-camera">
+          <div class="col-sm-6 col-md-4">
+            <div class="card w-100 card-border mb-5">
+              <img src="img/vcam_1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a id="productLink" href="" class="btn btn-primary"
+                  >Voir Details</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-      </template>
+        </template>
+      </div>
     </div>
-  </div>
 
-  <script src="styles/styles.js" ></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="js/header.js"></script>
-  <script src="js/allProducts.js"></script>
-  <script src="js/footer.js"></script>
-
-</body>
+    <script src="styles/styles.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/header.js"></script>
+    <script src="js/allProducts.js"></script>
+    <script src="js/footer.js"></script>
+  </body>
 </html>

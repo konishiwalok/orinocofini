@@ -5,9 +5,9 @@ const productItem = document.getElementById('product-item').content;// llamamos 
 const fragment = document.createDocumentFragment(); // agrega el fragmento de codigo que se quiere mostrar
 
 const valores = window.location.search;
-//Creamos la instancia
+//Creation d'instance
 const urlParams = new URLSearchParams(valores);
-//Accedemos a los valores
+//Acceder aux valeurs
 let orderId = urlParams.get('id');
 
 
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const fetchData = async () => {
 
     try {
-        const res = await fetch(url + "/" + orderId); // respuesta del API
-        const data = await res.json(); // cambio de los datos a archivo JSON
+        const res = await fetch(url + "/" + orderId); // response d API
+        const data = await res.json(); // changement a ficher  JSON
         //console.log(data);
         showProduct(data);
     } catch (error) {

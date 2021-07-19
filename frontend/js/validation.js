@@ -4,11 +4,11 @@ const btnCart = document.getElementById('confirmPurchase')
 
 
 const expresiones = {
-	firstname: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	lastname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	firstname: /^[A-Za-z]+([\ A-Za-z]+)*/,
+	lastname: /^[A-Za-z]+([\ A-Za-z]+)*/,
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	zipcode: /[0-9]{5}(-[0-9]{4})?/,
-	city: /^[a-zA-ZÀ-ÿ0-9\_\s\,\-]{4,16}$/,
+	city: /^[A-Za-z]+([\ A-Za-z]+)*/,
 	adress: /^[a-zA-ZÀ-ÿ0-9\s\,\''\-]*$/,
 }
 

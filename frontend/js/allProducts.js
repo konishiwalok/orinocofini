@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const fetchData = async () => {
 
     try {
-        const res = await fetch(url); // respuesta del API
-        const data = await res.json(); // cambio de los datos a archivo JSON
+        const res = await fetch(url); // response  d API
+        const data = await res.json(); // changement de ficher JSON
         //console.log(data);
         showAllCards(data) //
     } catch (error) {

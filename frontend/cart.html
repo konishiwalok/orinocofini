@@ -31,9 +31,9 @@
   </head>
 
   <body>
-    <div class="tableau-mini  bg-oniPink my-5 container">
+    <div class="tableau-mini bg-oniPink my-5 container">
       <h4 class="py-5 text-center stilo700">Mon panier</h4>
-      <table class="table ">
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">Cameras</th>
@@ -47,49 +47,46 @@
         <tbody id="items-cart"></tbody>
         <tfoot>
           <tr id="footer-cart">
-            <th scope="row" colspan="5">
-              Panier vide , ajoutez des produits!
-            </th>
+            <th scope="row" colspan="6">Panier vide , ajoutez des produits!</th>
           </tr>
         </tfoot>
       </table>
       <!-- <h4>Cards</h4> -->
       <div class="row" id="cards"></div>
-    
 
-    <template id="template-footer">
-      <th scope="row" colspan="2">Total produits</th>
-      <td class="total-products">10</td>
-      <td>
-        <button
-          class="btn btn-danger btn-sm h1"
-          style="font-size: 15px"
-          id="btn-clear-cart"
-        >
-          vider le panier
-        </button>
-      </td>
-      <td></td>
-      <td class="font-weight-bold">
-        $ <span id="total-price" class="total-price">5000</span>
-      </td>
-    </template>
-
-    <template id="template-cart">
-      <tr>
-        <th scope="row">id</th>
-        <td class="name-item">Café</td>
-        <td class="cantidad-item">1</td>
+      <template id="template-footer">
+        <th scope="row" colspan="2">Total produits</th>
+        <td class="total-products">10</td>
         <td>
-          <button class="btn btn-info btn-sm sum">+</button>
-          <button class="btn btn-danger btn-sm res">-</button>
+          <button
+            class="btn btn-danger btn-sm h1"
+            style="font-size: 15px"
+            id="btn-clear-cart"
+          >
+            vider le panier
+          </button>
         </td>
-        <td>$ <span id="precio-item">500</span></td>
-        <td>$ <span id="total-item">500</span></td>
-      </tr>
-    </template>
+        <td></td>
+        <td class="font-weight-bold">
+          $ <span id="total-price" class="total-price">5000</span>
+        </td>
+      </template>
 
-    <!-- <template id="template-card">
+      <template id="template-cart">
+        <tr>
+          <th scope="row">id</th>
+          <td class="name-item">Café</td>
+          <td class="cantidad-item">1</td>
+          <td>
+            <button class="btn btn-info btn-sm sum">+</button>
+            <button class="btn btn-danger btn-sm res">-</button>
+          </td>
+          <td>$ <span id="precio-item">500</span></td>
+          <td>$ <span id="total-item">500</span></td>
+        </tr>
+      </template>
+
+      <!-- <template id="template-card">
       <div class="col-12 mb-2">
         <div class="card">
           <div class="card-body">
@@ -102,11 +99,11 @@
     </template> -->
     </div>
 
-    <section class="mt-4 rounded-md p-4 degrade container ">
+    <main class="mt-4 rounded-md p-4 degrade container">
       <h2 class="text-lg font-bold mb-2 h2 stilo700">Passer commande</h2>
 
-      <main>
-        <form action="" class="formulario" id="formulario">
+      <div>
+        <form  class="formulario" id="formulario">
           <!-- Grupo: Nom-->
           <div class="formulario__grupo" id="grupo__lastname">
             <label for="lastname" class="formulario__label">Nom</label>
@@ -206,35 +203,15 @@
           </div>
 
           <div class="formulario__grupo formulario__grupo-btn-enviar">
-            <a 
-            class="
-            formulario__btn
-            confirmPurchase
-            inline-flex justify-center py-2 px-4 mt-5 h5 shadow-sm text-sm
-            font-medium  rounded-md text-white  bg-indigo-600 hover:bg-indigo-700" 
-            id="confirmPurchase">Envoyer</a>
-            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
-              Formulario enviado exitosamente!
-            </p>
-          </div>
-          <!-- <div
-            class="
-              flex
-              justify-end
-              formulario__grupo formulario__grupo-btn-enviar 
-            
-            "
-          >
             <a
-              id="confirmPurchase"
               class="
+                formulario__btn
                 confirmPurchase
                 inline-flex
                 justify-center
                 py-2
                 px-4
                 mt-5
-                border border-transparent
                 h5
                 shadow-sm
                 text-sm
@@ -243,23 +220,18 @@
                 text-white
                 bg-indigo-600
                 hover:bg-indigo-700
-                formulario__btn
               "
-              href="#"
-            >
-              Procéder au paiement</a
+              id="confirmPurchase"
+              style="text-decoration: none"
+              >Envoyer</a
             >
             <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
-                Formulario enviado exitosamente!
-              </p>
-          </div> -->
-          <!-- <div class="flex justify-end formulario__grupo formulario__grupo-btn-enviar">
-                    <a id="confirmPurchase" class="confirmPurchase inline-flex justify-center py-2 px-4 mt-5 border border-transparent h5 shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 "
-                      href="#" > Procéder au paiement</a>
-                   </div> -->
+              votre formulaire à été envoyé avec succés!
+            </p>
+          </div>
         </form>
-      </main>
-    </section>
+      </div>
+    </main>
     <script src="styles/styles.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>

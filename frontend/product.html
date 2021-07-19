@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="”robots”" content="index, follow" />
+    <meta
+      name="description"
+      content="Orinoco est une enterprise qui s'en charge de vendre des anciens appareils photos trés rares dans le monde "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="cameras vintage, uniques au monde,vintage  "
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name=”robots” content="index, follow">
-    <meta name="description" content="Orinoco est une enterprise qui s'en charge de vendre des anciens appareils photos trés rares dans le monde ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="cameras vintage, uniques au monde,vintage  " />
-    
     <title>Orinoco</title>
+    <script
+      crossorigin="anonymous"
+      src="https://kit.fontawesome.com/5e85fafa45.js"
+    ></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body> 
-
-  <div id="camera" class="container w-50 pl-5 pr-5 rounded-lg">
-   <div class="row align-items-center">
-     <div class="col-sm p-3 text-light text-center">
-       <h1 class="h2 text-shadow titrecamera stilo700" id="titleCamera">.</h1>
-     </div>
-   </div>
- </div>
-  <section class="degrade d-flex justify-content-center align-items-center "  style="min-height:800px;">
-   
-  <div class="row" id="product"></div>
-    <template id="product-item" class="container">
-    <div class="card mb-3 container p-3 " style="max-width: 80%; max-height: 60%">
-        <div class="row no-gutters">
-          <div class="col-md-4 " >
-             <img src="" alt="" class="card-img-top d-block w-100" >
-          </div>
-          <div class="col-md-8">
-            <h3 class="mb-3  py-3 stilo300">Titre</h3>
-            <p class="description mb-5 ">lorem</p>
-            <div  class="mb-3 " id="lenses-all-buttons"></div>
-            <p class="price-camera">prix</p>
-            <a class="btn btn-primary add-cart" >Add card</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="camera" class="container w-50 pl-5 pr-5 rounded-lg">
+      <div class="row align-items-center">
+        <div class="col-sm p-3 text-light text-center">
+          <h1 class="h2 text-shadow titrecamera stilo700" id="titleCamera">
+            .
+          </h1>
+          <a class="icone_fleche" href="index.html">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="degrade d-flex justify-content-center align-items-center"
+      style="min-height: 800px"
+    >
+      <div class="row" id="product"></div>
+      <template id="product-item" class="container">
+        <div
+          class="card mb-3 container p-3"
+          style="max-width: 80%; max-height: 60%"
+        >
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="" alt="" class="card-img-top d-block w-100" />
+            </div>
+            <div class="col-md-8">
+              <h3 class="mb-3 py-3 stilo300">Titre</h3>
+              <p class="description mb-5">lorem</p>
+              <div class="mb-3" id="lenses-all-buttons"></div>
+              <p class="price-camera">prix</p>
+              <a class="btn btn-primary add-cart">Ajouter au panier</a>
             </div>
           </div>
         </div>
-    </template>
-</section>
+      </template>
+    </div>
 
-    <script src="styles/styles.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="styles/styles.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/header.js"></script>
     <script src="js/product.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/addCart.js"></script>
-
-
-</body>
+  </body>
 </html>

@@ -1,7 +1,7 @@
 const valores = window.location.search;
-//Creamos la instancia
+//Creation d'instance
 const urlParams = new URLSearchParams(valores);
-//Accedemos a los valores
+//Accedes aux valeurs
 let orderId = urlParams.get('orderId');
 
 
